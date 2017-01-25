@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Amaze-me",
+  "description": "This extension shows a current price of selected amazon item",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+      "storage"
+    ],
+  "content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["jquery_3.1.1.js"]
+  }
+]
+}

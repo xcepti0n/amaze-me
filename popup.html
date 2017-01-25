@@ -1,0 +1,67 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #divform {
+        /* avoid an excessively wide status text */
+        display: none;
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 400px;
+      }
+      #price{
+      	display: block;
+      	width: 400px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+     <script type="text/javascript" src="jquery_3.1.1.js"></script>
+     <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body>
+  <div id="price" >
+  	<!-- show prices here-->
+  	<div id="divi1">
+  	</div>
+  	<br>
+  	<div id="divi2">
+  	</div>
+  	<br>
+  	<div id="divi3">
+  	</div>
+  	<br>
+  	<div id="divi4">
+  	</div>
+  	
+   </div>
+  <button id="linkbelowprice" size=10 class="linkers">Edit url</button>
+    <div id="divform" >
+    <form >
+    	<input id="i1" type="text" value="http://www.amazon.in/Scatchite-Boxer-Black-Casual-Shoe-8/dp/B01ADAXP9Y/ref=sr_1_2?s=shoes%26ie=UTF8%26qid=1485169309%26sr=1-2%26keywords=shoes+for+men"> 
+    	<input id="i2" type="text" size=20/> 
+    	<input id="i3" type="text" size=20/> 
+    	<input id="i4" type="text" size=20/> 
+    </form>
+    <button id="linkform" >Save and Hide</button>
+
+    </div>
+  </body>
+</html>
+
