@@ -7,25 +7,22 @@
 <html>
   <head>
     <title>Getting Started Extension's Popup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
       #divform {
         /* avoid an excessively wide status text */
-        display: none;
-        white-space: pre;
+        display: block;
         text-overflow: ellipsis;
         overflow: hidden;
         width: 400px;
+		background-color:none;
       }
       #price{
       	display: block;
       	width: 400px;
       }
     </style>
-
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
       - Policy documentation[1] for details and explanation.
@@ -35,7 +32,7 @@
      <script type="text/javascript" src="jquery_3.1.1.js"></script>
      <script type="text/javascript" src="popup.js"></script>
   </head>
-  <body>
+  <body background="bg.jpg">
   <div id="price" >
   	<!-- show prices here-->
   	<div id="divi1">
@@ -51,17 +48,34 @@
   	</div>
   	
    </div>
-  <button id="linkbelowprice" size=10 class="linkers">Edit url</button>
+   
+  <button id="linkbelowprice" size=10 class="linkers btn btn-warning btn-sm">Edit url</button>
+  <p />
     <div id="divform" >
     <form >
-    	<input id="i1" type="text" value="http://www.amazon.in/Scatchite-Boxer-Black-Casual-Shoe-8/dp/B01ADAXP9Y/ref=sr_1_2?s=shoes%26ie=UTF8%26qid=1485169309%26sr=1-2%26keywords=shoes+for+men"> 
-    	<input id="i2" type="text" size=20/> 
-    	<input id="i3" type="text" size=20/> 
-    	<input id="i4" type="text" size=20/> 
-    </form>
-    <button id="linkform" >Save and Hide</button>
+		 <div  class="input-group">
+			<span class="input-group-addon" >URL</span>
+			<input id="i1" type="text" class="form-control" name="msg" placeholder="Buying Item Link" value="http://www.amazon.in/Scatchite-Boxer-Black-Casual-Shoe-8/dp/B01ADAXP9Y/ref=sr_1_2?s=shoes%26ie=UTF8%26qid=1485169309%26sr=1-2%26keywords=shoes+for+men">
+		  </div>
+    	 <div class="input-group">
+			<span class="input-group-addon">URL</span>
+			<input id="i2" type="text" class="form-control" name="msg" placeholder="Buying Item Link">
+		  </div>
+		  <div class="input-group">
+			<span class="input-group-addon">URL</span>
+			<input id="i3" type="text" class="form-control" name="msg" placeholder="Buying Item Link">
+		  </div>
+		  <div class="input-group">
+			<span class="input-group-addon">URL</span>
+			<input id="i4" type="text" class="form-control" name="msg" placeholder="Buying Item Link">
+		  </div> 
+			</form>
+			<br />
+		<button id="linkform" class="btn btn-success btn-sm">Hide and Refresh</button>
+		</div>
 
-    </div>
+		  
+			
   </body>
 </html>
 
