@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById("linkform").addEventListener("click",refresh_and_hide);
 });
+
+
 document.addEventListener('DOMContentLoaded', function() {
     chrome.storage.local.get("key", function (obj) {
      // alert(JSON.stringify(obj.key));
@@ -18,7 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById("i2").value=obj.i2.toString();
       document.getElementById("i3").value=obj.i3.toString();
       document.getElementById("i4").value=obj.i4.toString();
-    }); 
+      for( var i=1;i<5;i++){
+        var obj=document.getElementById("divi"+i);
+        var sr=document.getElementById("i"+i);
+         if(sr.value==""){
+          obj.style.display='none';
+          }
+        else{
+            obj.style.display='block';
+          }
+        }
+      }); 
   //uploads the data into repective divs
   //alert("data cant be loaded right now\n Thank you for understanding");
 });
@@ -103,3 +115,4 @@ function saveChanges() {
      
     }
 
+//6,7,10
