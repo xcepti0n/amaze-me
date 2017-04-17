@@ -61,7 +61,7 @@ function refresh_and_hide(e){
       });
       if(textfield.value && textfield.value!=values)
       {
-        divfield.innerHTML=httpGet("http://127.0.0.1:4000/q?url="+textfield.value);
+        divfield.innerHTML=httpGet("https://mysterious-temple-71453.herokuapp.com/q?url="+textfield.value);
       }// defined above
       // Create the callback:
     //   req.onreadystatechange = function() {
