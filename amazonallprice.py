@@ -1,5 +1,6 @@
 from flask import Flask,request
 from flask_restful import Resource, Api, reqparse
+import os
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 app = Flask(__name__)
@@ -68,5 +69,5 @@ class AmazonPrice (Resource):
 api.add_resource(AmazonPrice,'/q')
 if __name__ == '__main__':
        port = int(os.environ.get('PORT', 5000))
-       app.run(host='0.0.0.0',port=port)
+       app.run(debug=True,port=port)
 

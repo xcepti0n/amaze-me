@@ -1,5 +1,4 @@
 beautifulsoup4==4.4.1
 Flask==0.12
-html5lib==0.999
-httplib2==0.9.1
+Flask-RESTful==0.3.5
 
