@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
 function hideit(e){
 var divform = document.getElementById("divform");
 var hideButton =document.getElementById("linkbelowprice");
-if (divform.style.display != 'none') {
+if (divform.style.display == 'block') {
       divform.style.display = 'none';
-	  hideButton.value = "Edit URL's";
+	  hideButton.innerHTML = "Edit URL's";
   }
   else {
       divform.style.display = 'block';
-	  hideButton.value = "Hide URL's";
+	  hideButton.innerHTML = "Hide URL's";
   }
 }
 function refresh_and_hide(e){
